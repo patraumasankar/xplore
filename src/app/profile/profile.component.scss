@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.mat-card {
+    flex-basis: 90%;
+    max-width: 400px;
+    height: 750px;
+    padding: 16px !important;
+}
+
+.card-container{
+    height: 100%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image {
+    position: relative;
+    width: 120px;
+    margin: auto;
+}
+
+.profile-image img {
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile-image button {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}

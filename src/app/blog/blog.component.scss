@@ -1,0 +1,190 @@
+* {
+  // margin: 0;
+  // padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 46px;
+  font-weight: 800;
+  margin: 15px 0;
+  line-height: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #24f8c7;
+}
+
+h2 {
+  font-size: 30px;
+  padding: 10px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+  margin-left: -10px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.blog-content {
+  width: 80%;
+  margin: auto;
+  padding: 30px 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: justify;
+}
+
+.col-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col img {
+  height: 250px;
+  width: 400px;
+  border-radius: 12px;
+  margin: 10px;
+  margin-left: 0;
+}
+
+.col p {
+  margin-bottom: 0;
+}
+
+.col,
+.content-col {
+  margin-bottom: 20px;
+}
+
+div.col.right {
+  justify-content: flex-end;
+}
+
+.content-col {
+  flex-basis: 48%;
+  margin-bottom: 30px;
+}
+
+.blog-right {
+  flex-basis: 32%;
+}
+
+.blog-right h3 {
+  background: #24f8c7;
+  padding: 7px 0;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.blog-right div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.blog-right div:hover {
+  color: #24f8c7;
+  cursor: pointer;
+}
+
+.mat-card {
+  padding: 16px !important;
+  max-width: 400px;
+  height: 420px;
+}
+
+.center {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.center button {
+  padding: 5px 15px;
+}
+
+.center h3 {
+  margin: 0;
+  font-size: 24px;
+  color: #24f8c7;
+  font-weight: 500;
+}
+
+@media(max-width:768px) {
+  h1 {
+    font-size: 24px;
+    line-height: 40px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    margin: 0;
+    padding: 5px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col {
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+  .col .col-content {
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+
+  div.col.right {
+    justify-content: center;
+  }
+
+  div.row.right-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .col img {
+    height: 200px;
+    width: 300px;
+    margin: 0;
+    padding: 5px;
+  }
+
+}
+
+@media(max-width:480px) {
+  p {
+    margin: 0;
+  }
+
+  .col img {
+    height: 200px;
+    width: 300px;
+    margin: 0;
+  }
+}

@@ -1,0 +1,81 @@
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="mat-typography mat-app-background">
+    <mat-toolbar color="primary" class="header">
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon class="me-3">menu</mat-icon>
+        </button>
+        <div style="font-weight: 500">Xplore Skill</div>
+        <span class="example-spacer"></span>
+        <ng-container *ngIf="user$ | async as user; else loginButton">
+            <mat-card>
+                <mat-card-header [matMenuTriggerFor]="userMenu">
+                    <img mat-card-avatar [src]="user.photoURL ?? 'assets/img/user.png'" />
+                </mat-card-header>
+            </mat-card>
+        </ng-container>
+        <ng-template #loginButton>
+            <button mat-raised-button routerLink="signin" color="accent">
+                <mat-icon class="me-2" inline=true>login</mat-icon>
+                Login
+            </button>
+        </ng-template>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="nav-container">
+        <mat-sidenav class="sidenav d-grid gap-5" #sidenav mode="over">
+            <mat-nav-list>
+                <a mat-list-item routerLink="/home">
+                    <mat-icon class="me-4">home</mat-icon> Home
+                </a>
+                <a mat-list-item routerLink="/about">
+                    <mat-icon class="me-4">info</mat-icon> About
+                </a>
+                <a mat-list-item routerLink="/contact">
+                    <mat-icon class="me-4">supervisor_account</mat-icon> Contact
+                </a>
+                <a mat-list-item routerLink="/course">
+                    <mat-icon class="me-4">business_center</mat-icon> Course
+                </a>
+                <a mat-list-item routerLink="/blog">
+                    <mat-icon class="me-4">event</mat-icon> Blog
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+
+    <mat-menu #userMenu="matMenu">
+        <button mat-menu-item>
+            <div class="row" *ngIf="user$ | async as user">
+                <div class="col">
+                    <img mat-card-avatar [src]="user.photoURL ?? 'assets/img/user.png'" class="me-3" />
+                </div>
+                <div class="col">
+                    <h4> {{ user.displayName}}</h4>
+                    <h3>{{ user.email}}</h3>
+                </div>
+            </div>
+        </button>
+        <mat-divider></mat-divider>
+        <button mat-menu-item routerLink="/profile">
+            <mat-icon>account_circle</mat-icon>
+            Profile
+        </button>
+        <button mat-menu-item (click)="logout()">
+            <mat-icon>logout</mat-icon>
+            Logout
+        </button>
+        <button mat-menu-item>            
+            <mat-icon >{{ mode }}</mat-icon>
+            {{modename}}
+            <mat-slide-toggle [(ngModel)]="isChecked" (change)="changed($event)" style="float: right; height: 46px;">
+            </mat-slide-toggle>
+        </button>
+    </mat-menu>
+
+</body>

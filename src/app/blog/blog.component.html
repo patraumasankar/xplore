@@ -1,0 +1,108 @@
+<body class="mat-typography mat-app-background">
+    <section class="blog-content">
+        <h1>Our Certificate & Online Program</h1>
+        <div class="row">           
+            <div class="col">
+            <img src="assets/img/blog2.jpg" alt="post img"></div>
+            <div class="col col-content">
+                <h2>Heading for content</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolor consequatur, nobis quae
+                obcaecati
+                delectus at aspernatur, placeat quasi iure mollitia. Repellendus a ut nostrum dolore velit odit cumque,
+                quos
+                doloribus sint id aperiam eius aliquam quo modi sequi rem quia exercitationem laborum, ratione expedita!
+                Deleniti velit officia incidunt illum.</p></div>
+           
+            </div>
+            <div class="row right-reverse">
+                
+                <div class="col col-content">
+                    <h2>Heading for content</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore corrupti blanditiis deserunt
+                incidunt itaque ut laudantium a amet omnis nihil, dolor doloribus. Voluptatum, accusantium? Quo,
+                aperiam nobis labore pariatur, esse vitae amet repellendus libero architecto nisi facere unde
+                ducimus perspiciatis, laudantium alias porro. Sapiente voluptatem eligendi at voluptatum optio
+                facilis?</p></div>
+                <div class="col right "><img src="assets/img/blog1.jpg" alt="post img"></div>
+                </div>
+          
+            <div class="row">           
+                <div class="col">
+                <img src="assets/img/post.png" alt="post img"></div>
+                <div class="col col-content">
+                    <h2>Heading for content</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolor consequatur, nobis quae
+                    obcaecati
+                    delectus at aspernatur, placeat quasi iure mollitia. Repellendus a ut nostrum dolore velit odit cumque,
+                    quos
+                    doloribus sint id aperiam eius aliquam quo modi sequi rem quia exercitationem laborum, ratione expedita!
+                    Deleniti velit officia incidunt illum.</p></div>
+            
+                </div>
+                <div class="row right-reverse">
+                    
+                    <div class="col col-content">
+                        <h2>Heading for content</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore corrupti blanditiis deserunt
+                    incidunt itaque ut laudantium a amet omnis nihil, dolor doloribus. Voluptatum, accusantium? Quo,
+                    aperiam nobis labore pariatur, esse vitae amet repellendus libero architecto nisi facere unde
+                    ducimus perspiciatis, laudantium alias porro. Sapiente voluptatem eligendi at voluptatum optio
+                    facilis?</p></div>
+                    <div class="col right"><img src="assets/img/blog3.jfif" alt="post img"></div>
+                    </div>  
+        <div class="row">
+            <div class="content-col">
+                <mat-card class="mat-card" *ngIf="user$ | async as user">
+                    <div class="center">
+                        <h3>Leave a Comment</h3>
+                    </div>
+                    <form [formGroup]="blogForm" (ngSubmit)="submit()">
+                        <mat-form-field appearance="outline" class="mt-2">
+                            <mat-label>Enter your name</mat-label>
+                            <input type="text" matInput value={{user.displayName}}>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Enter your email</mat-label>
+                            <input type="email" matInput value={{user.email}}>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Your Comment</mat-label>
+                            <textarea matInput formControlName="comment"></textarea>
+                        </mat-form-field>
+
+                        <div class="center">
+                            <button mat-raised-button color="accent" style="padding: 5px 15px;">Post Comment</button>
+                        </div>
+                    </form>
+                </mat-card>
+            </div>
+
+            <div class="blog-right">
+                <h3>Post Categories</h3>
+                <div>
+                    <span>Business Analytics</span>
+                    <span>12</span>
+                </div>
+                <div>
+                    <span>Machine Learning</span>
+                    <span>29</span>
+                </div>
+                <div>
+                    <span>Computer Science</span>
+                    <span>15</span>
+                </div>
+                <div>
+                    <span>Data Analytics</span>
+                    <span>22</span>
+                </div>
+                <div>
+                    <span>Full Stack</span>
+                    <span>20</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <app-footer></app-footer>
+</body>

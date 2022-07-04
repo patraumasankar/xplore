@@ -1,0 +1,68 @@
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="mat-typography mat-app-background">
+
+    <section class="contact-us">
+        <h1>our contact</h1>
+        <div class="row">
+            <div class="col">
+                <div>
+                    <mat-icon>home</mat-icon>
+                    <span>
+                        <h5>NH59 Road, ABC Building</h5>
+                        <p>Berhampur, Odisha, IN</p>
+                    </span>
+                </div>
+                <div>
+                    <mat-icon>phone</mat-icon>
+                    <span>
+                        <h5>+91 7445546525</h5>
+                        <p>Monday To Saturday, 9AM To 6PM</p>
+                    </span>
+                </div>
+                <div>
+                    <mat-icon>email</mat-icon>
+                    <span>
+                        <h5>xyz@email.com</h5>
+                        <p>Email Us Yor Query</p>
+                    </span>
+                </div>
+            </div>
+            <div class="col">
+                <mat-card class="mat-card" *ngIf="user$ | async as user">
+                    <div class="center mt-2">
+                        <h3>Contact Us</h3>
+                    </div>
+                    <form [formGroup]="contactForm" (ngSubmit)="submit();">
+                        <mat-form-field appearance="outline" class="mt-2">
+                            <mat-label>Enter your name</mat-label>
+                            <input type="text" matInput value={{user.displayName}}>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Enter your email</mat-label>
+                            <input type="email" matInput value={{user.email}}>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Enter subject</mat-label>
+                            <input type="text" matInput formControlName="subject">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Message</mat-label>
+                            <textarea matInput formControlName="message"></textarea>
+                        </mat-form-field>
+
+                        <div class="center">
+                            <button mat-raised-button color="accent">Send Message</button>
+                        </div>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </section>
+    <app-footer></app-footer>
+</body>

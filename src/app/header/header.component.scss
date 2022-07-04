@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+mat-icon {
+  line-height: unset;
+  font-size: 30px;
+}
+
+p {
+  font-size: 16px;
+  margin: 0;
+}
+
+h3,h4{
+  margin-bottom: 0;
+  line-height: 24px;
+}
+.header {
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.nav-container {
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.sidenav {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 15%;
+}
+
+.mat-drawer-container {
+  background-color: transparent;
+}
+
+.mat-nav-list .mat-list-item {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.mat-list-item:hover {
+  background-color: transparent;
+
+}
+
+.mat-list-item:focus {
+  background-color: transparent;
+}
+
+.mat-card {
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  color: white;
+}
+
+.user-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-card-title {
+  margin: 0 !important;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.mat-menu-item .mat-icon{
+  vertical-align: top;
+}
+
+.mat-menu-panel {
+  margin-top: 19px !important;
+}
+
+@media (max-width: 768px) {
+  .sidenav {
+    width: 180px;
+  }
+
+  .mat-nav-list .mat-list-item {
+    font-size: 16px;
+  }
+}

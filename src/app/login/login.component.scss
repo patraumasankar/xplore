@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.mat-card {
+    flex-basis: 90%;
+    max-width: 400px;
+    height: 485px;
+    padding: 16px !important;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}

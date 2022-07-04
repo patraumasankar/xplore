@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 46px;
+    font-weight: 800;
+    margin: 15px 0;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #24f8c7;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    text-align: center;
+}
+
+.course,
+.facilities {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.course-card p {
+    padding: 10px;
+}
+
+.PageBlock {
+    position: relative;
+    margin: 0px !important;
+    padding: 0px;
+}
+
+.verticalLine {
+    width: 2px;
+    height: 100px;
+    background: #24f8c7;
+    margin: 0 auto 40px;
+}
+
+.Clear {
+    clear: both;
+}
+
+.course-card {
+    padding-top: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-card .mat-card h3 {
+    text-align: center;
+    margin: 10px 0;
+    line-height: 1.1;
+}
+
+.course-card .mat-card:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.facilities-col {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.facilities-col img {
+    height: 220px;
+    transition: 0.5s;
+    border-radius: 4px;
+}
+
+.facilities-col img:hover {
+    box-shadow: 0 0 20px 10px rgba(54, 58, 121, 0.2);
+}
+
+.facilities-col p {
+    padding: 0;
+}
+
+.facilities-col h3 {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 15px;
+}
+
+.mat-card {
+    padding: 16px !important;
+}
+
+.course-card .mat-card {
+    margin: 10px;
+    height: fit-content;
+}
+
+.facilities .mat-card {
+    margin: 5px;
+    height: fit-content;
+}
+
+.mat-card-image {
+    margin: -16px -16px 16px -16px !important;
+}
+
+@media (max-width: 768px) {
+    .verticalLine {
+        width: 1px;
+    }
+
+    h1 {
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    .course-card,
+    .row {
+        flex-direction: column;
+    }
+
+}
